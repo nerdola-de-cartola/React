@@ -5,7 +5,7 @@ import App2 from './components/App2';
 import App3 from './components/App3';
 import App4 from './components/App4';
 import App5 from './components/App5';
-import List from './components/List';
+import {List, Item} from './components/List';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -31,6 +31,13 @@ ReactDOM.render(
     </App5> */}
 
     <List>
+      Text
+      <Item key={999} id={999} complete={false}>
+        Teste1
+      </Item>
+      <Item key={998} id={998} complete={true}>
+        Teste2
+      </Item>
     </List>
   </React.StrictMode>,
   document.getElementById('root')

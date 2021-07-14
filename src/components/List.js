@@ -15,10 +15,11 @@ class List extends React.Component {
     }
 
     render() {
-        
+
         return (
             <>
                 <ul>
+                    {React.Children.map(this.props.children, child => child.type == Item ? child : null)}
                     {this.state.items.map((item) => (
                         <Item key={item.id} complete={item.complete}>
                             {item.name}
@@ -31,15 +32,15 @@ class List extends React.Component {
 }
 
 class Item extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
     }
 
     render() {
         const textDecoration = this.props.complete ? 'line-through' : 'none'
-        return(
+        return (
             <>
-                <li data-id={this.props.id} style={{textDecoration}}>
+                <li data-id={this.props.id} style={{ textDecoration }}>
                     {this.props.children}
                 </li>
             </>
@@ -47,4 +48,4 @@ class Item extends React.Component {
     }
 }
 
-export default List;
+export { List, Item };
