@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import App from './components/App';
-// import App2 from './components/App2';
-// import App3 from './components/App3';
-// import App4 from './components/App4';
-// import App5 from './components/App5';
-// import {List, Item} from './components/List';
-import Form from './components/Form';
+// import Hello from './components/functional-component/Hello';
+import Fapp from './components/functional-component/Fapp';
+// import App from './components/object-components/App';
+// import App2 from './components/object-components/App2';
+// import App3 from './components/object-components/App3';
+// import App4 from './components/object-components/App4';
+// import App5 from './components/object-components/App5';
+// import {List, Item} from './components/object-components/List';
+// import Form from './components/object-components/Form';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -41,8 +43,15 @@ ReactDOM.render(
       </Item>
     </List> */}
 
-    <Form>
-    </Form>
+    {/* <Form>
+    </Form> */}
+
+    {/* <Hello text='Hello World!'>
+      <h2>Hello again!</h2>
+    </Hello> */}
+
+    <Fapp>
+    </Fapp>
 
   </React.StrictMode>,
   document.getElementById('root')
