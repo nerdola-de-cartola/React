@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 
 export default function Fapp() {
-    const [name, setName] = useState('Matheus')
-    const onClick = () => setName('Lucas')
+    const [name, setName] = useState('')
 
     return (
         <>
-            <h1>Ok!</h1>
-            <h2 onClick={onClick}>{name}</h2>
+            Name: <input type='text' value={name} onChange={(event) => setName(event.target.value)}/>
+            <br/>
+            Olá {name}
         </>
     )
 }
